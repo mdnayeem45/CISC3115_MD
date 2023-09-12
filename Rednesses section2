@@ -1,0 +1,115 @@
+Question 1.
+
+
+public class ArraySum {
+    public static void main(String[] args) {
+        int[] arr = {9, 18, 5, 27, 36, 45};
+        int sum = m1(arr);
+        System.out.println("Sum of elements exceeding index and multiples of 9: " + sum);
+    }
+
+    public static int m1(int[] arr) {
+        int sum = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > i && arr[i] % 9 == 0) {
+                sum += arr[i];
+            }
+        }
+
+        return sum;
+    }
+}
+
+
+Question 2:
+
+public class ArrayIndexLargest {
+    public static void main(String[] args) {
+        double[] arr = {1.2, 3.4, 5.6, 7.8, 9.0};
+        int largestIndex = m2(arr);
+        System.out.println("Index of the largest element: " + largestIndex);
+    }
+
+    public static int m2(double[] arr) {
+        int largestIndex = 0; 
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > arr[largestIndex]) {
+                largestIndex = i; 
+            }
+        }
+
+        return largestIndex;
+    }
+}
+
+Question 3:
+
+
+public class ArrayElementCount {
+    public static void main(String[] args) {
+        double[] arr = {1.2, 3.4, 2.5, 3.4, 6.7, 3.4};
+        double x = 3.4;
+        int count = m3(arr, x);
+        System.out.println("Number of elements equal to " + x + ": " + count);
+    }
+
+    public static int m3(double[] arr, double x) {
+        int count = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == x) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+}
+
+Question 4:
+
+
+import java.util.Scanner;
+public class P2 {
+     public static void main(String[] args) {
+          Scanner sc = new Scanner(System.in);
+          double smallest=0;
+          int header = sc.nextInt();
+          smallest = sc.nextDouble();
+          for (int i=1; i<header; i++) {
+               double w = sc.nextDouble();
+               if (w<smallest)
+smallest = w;
+}
+          System.out.println(smallest);
+     }
+}
+
+
+
+
+Question 5. 
+
+import java.util.Scanner;
+
+public class P2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int count = 0; 
+        
+        while (sc.hasNext()) {
+            int num = sc.nextInt();
+            
+            if (num == 0) {
+                System.out.print(count + " ");
+                count = 0; // Reset the count for the next sequence
+            } else if (num < 0) {
+                count++; 
+            }
+        }
+        
+        sc.close();
+    }
+}
